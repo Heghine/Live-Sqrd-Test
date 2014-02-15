@@ -11,7 +11,7 @@
                 that.render();
             },
             events: {
-		'click .create': "createItem"
+		'click .create':'createItem'
             },
             render:function(){
                 var that       = this;
@@ -26,7 +26,7 @@
 			var that = this;
 			this.items.create {
 				"path" : "newobj",
-				"title" : "hhhk"
+				"title" : "hhhk",
 				"group" : "people",
 				"body" : {
 					"name" : "hhh"
