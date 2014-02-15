@@ -16,11 +16,16 @@
             render:function(){
                 var that       = this;
                 that.$el.html(this.home({}))
-               /* that.items.fetch({
+                that.items.fetch({
                     success:function(){
+			 that.items.each(function(m){
+                            that.listItem(m);
+                            // that.$('.list').append("<li>"+m.get("body.first")
+                            // +" "+m.get("body.last")+"</li>")
+                        })
                     },data:{}
                 })
-             */
+             
             
             },createItem:function() {
 			var that = this;
@@ -29,12 +34,17 @@
 				"title" : "hhhk",
 				"group" : "people",
 				"body" : {
-					"name" : "hhh"
+					"first" : "bob",
+					"last" : "b"
 				}
 			}, {callback: function(){
 				that.$('.d1').html("hello")
 			}})	
-		}
+	},listItem:function(m){
+                if(this.$(".list li[data-id='"+m.id+"']").length ==0)
+                    this.$('.list').append("<li data-id='"+m.id+"'>"+m.get("body.first")
+                            +" "+m.get("body.last")+"</li>")
+       }
     });
 });
 
