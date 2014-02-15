@@ -24,7 +24,7 @@
             
             },createItem:function() {
 			var that = this;
-			this.items.create {
+			this.items.create ({
 				"path" : "newobj",
 				"title" : "hhhk",
 				"group" : "people",
@@ -33,7 +33,7 @@
 				}
 			}, {callback: function(){
 				that.$('.d1').html("hello")
-			}}	
+			}})	
 		}
     });
 });
