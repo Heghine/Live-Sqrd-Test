@@ -11,6 +11,7 @@
                 that.render();
             },
             events: {
+		'click .create': "createItem"
             },
             render:function(){
                 var that       = this;
@@ -21,7 +22,19 @@
                 })
              */
             
-            }
+            },createItem:function() {
+			var that = this;
+			this.items.create {
+				"path" : "newobj",
+				"title" : "hhhk"
+				"group" : "people",
+				"body" : {
+					"name" : "hhh"
+				}
+			}, {callback: function(){
+				that.$('.d1').html("hello")
+			}}	
+		}
     });
 });
 
